@@ -293,3 +293,48 @@ header.sticky {
     margin: 15px 0;
   }
 }
+
+/* ===== SOCIAL BUTTONS ===== */
+.social {
+  margin-bottom: 25px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  margin-right: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-btn i {
+  font-size: 18px;
+}
+
+/* LinkedIn */
+.linkedin {
+  background: #0077b5;
+  color: #fff;
+}
+
+.linkedin:hover {
+  background: #005582;
+  transform: translateY(-3px);
+}
+
+/* GitHub */
+.github {
+  background: #1f2937;
+  color: #fff;
+  border: 1px solid #374151;
+}
+
+.github:hover {
+  background: #374151;
+  transform: translateY(-3px);
+}
