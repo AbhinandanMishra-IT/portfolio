@@ -23,15 +23,20 @@ section {
 /* ===== HEADER ===== */
 header {
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
+  background: rgba(17, 24, 39, 0.9);  /* Add background */
+  backdrop-filter: blur(10px);       /* Smooth glass effect */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
   transition: 0.3s ease;
 }
+
 
 header.sticky {
   background: #111827;
