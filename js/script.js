@@ -21,13 +21,32 @@ window.onscroll = () => {
 // Scroll Reveal Animations
 const sr = ScrollReveal({
   distance: '50px',
-  duration: 1500,
+  duration: 1200,
   reset: false
 });
 
-sr.reveal('.home-text', { delay: 200, origin: 'left' });
-sr.reveal('.home-img', { delay: 300, origin: 'right' });
-sr.reveal('.about, .experience, .portfolio, .service, .contact', {
+// Home Section
+sr.reveal('.home-text', { 
+  delay: 200, 
+  origin: 'left' 
+});
+
+sr.reveal('.home-img', { 
+  delay: 300, 
+  origin: 'right' 
+});
+
+// About, Skills, Portfolio, Contact
+sr.reveal('.about, .portfolio, .service, .contact', {
   delay: 200,
   origin: 'bottom'
+});
+
+// 🔥 Experience Animated Entry
+sr.reveal('.experience-card', {
+  delay: 200,
+  origin: 'bottom',
+  distance: '40px',
+  duration: 1200,
+  interval: 200   // Cards appear one by one
 });
