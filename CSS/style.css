@@ -591,3 +591,53 @@ body {
     font-size: 24px;
   }
 }
+/* ===== CONTACT SECTION DESIGN ===== */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 10%;
+}
+
+.contact-box {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid rgba(0, 234, 255, 0.2);
+}
+
+.contact-box h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #00eaff;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.contact-item i {
+  font-size: 22px;
+  color: #00eaff;
+}
+
+.contact-item a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #00eaff;
+}
