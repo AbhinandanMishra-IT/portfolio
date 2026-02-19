@@ -13,7 +13,7 @@ body {
   background: #0f172a;
   color: #ffffff;
   line-height: 1.7;
-  padding-top: 100px;   /* THIS IS IMPORTANT */
+  padding-top: 70px;   /* THIS IS IMPORTANT */
 }
 
 /* ===== SECTION SPACING ===== */
@@ -409,7 +409,6 @@ header.sticky {
     text-align: center;
     gap: 2rem;
     height: auto;
-    padding-top: 120px;
   }
 
   .home-text h1 {
