@@ -27,17 +27,16 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  height: 70px;              /* Standard height */
+  padding: 0 10%;            /* Remove large vertical padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
-  background: rgba(17, 24, 39, 0.9);  /* Add background */
-  backdrop-filter: blur(10px);       /* Smooth glass effect */
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-  transition: 0.3s ease;
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
-
 
 header.sticky {
   background: #111827;
@@ -46,6 +45,13 @@ header.sticky {
 
 .navlist {
   display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.top-btn {
+  padding: 8px 18px;
+  font-size: 14px;
 }
 
 .navlist a {
