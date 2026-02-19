@@ -15,15 +15,11 @@ body {
   color: #ffffff;
   line-height: 1.7;
   padding-top: 70px;   /* Space for fixed header */
-  position: relative;
-  z-index: 1;
 }
 
 /* ===== SECTION SPACING ===== */
 section {
   padding: 120px 10%;
-  position: relative;
-  z-index: 2;
 }
 
 /* ===== HEADER ===== */
@@ -41,19 +37,19 @@ header {
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 header.sticky {
-  height: 60px;
-  background: rgba(17, 24, 39, 0.98);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  background: #111827;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ===== NAVIGATION ===== */
 .navlist {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .navlist a {
@@ -85,7 +81,7 @@ header.sticky {
 
 /* ===== MENU ICON ===== */
 #menu-icon {
-  font-size: 28px;
+  font-size: 32px;
   cursor: pointer;
   display: none;
 }
@@ -221,7 +217,7 @@ header.sticky {
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
 }
 
-/* ===== EXPERIENCE ===== */
+/* ===== EXPERIENCE SECTION ===== */
 .experience-container {
   display: flex;
   flex-direction: column;
@@ -251,8 +247,6 @@ header.sticky {
   margin-top: 60px;
   font-size: 14px;
   color: #94a3b8;
-  position: relative;
-  z-index: 2;
 }
 
 /* ===== PARTICLES BACKGROUND ===== */
