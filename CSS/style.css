@@ -276,26 +276,32 @@ header.sticky {
 
   #menu-icon {
     display: block;
+    font-size: 28px;
+    color: #ffffff;
   }
 
   .navlist {
-    position: absolute;
-    top: -1000px;
-    left: 0;
+    position: fixed;          /* IMPORTANT */
+    top: 70px;
+    left: -100%;
     width: 100%;
-    flex-direction: column;
+    height: calc(100vh - 70px);
     background: #111827;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: 0.3s ease;
-    padding: 20px 0;
+    z-index: 999;             /* Above everything */
   }
 
   .navlist.active {
-    top: 70px;
+    left: 0;
   }
 
   .navlist a {
-    margin: 15px 0;
+    display: block;
+    margin: 20px 0;
+    font-size: 18px;
   }
 }
 
@@ -446,12 +452,6 @@ body {
   z-index: 1;
 }
 
-header,
-section,
-.ends {
-  position: relative;
-  z-index: 2;
-}
 /* ===== Cursor Star Canvas ===== */
 #cursor-canvas {
   position: fixed;
