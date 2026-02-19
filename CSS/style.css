@@ -653,22 +653,24 @@ body {
     text-align: left;
 }
 
-.custom-bullets {
-    list-style: none;
-    padding-left: 0;
+/* ===== EXPERIENCE BULLET STYLE ===== */
+
+.experience-card ul {
+  list-style: disc;
+  padding-left: 25px;
+  margin-top: 15px;
 }
 
-.custom-bullets li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 8px;
-    text-align: left;
+.experience-card li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.7;
 }
 
-.custom-bullets li::before {
-    content: "*";
-    position: absolute;
-    left: 0;
-    color: #000; /* change color if needed */
-    font-weight: bold;
+/* Cyan Highlight Bullet */
+.experience-card li::marker {
+  color: #00eaff;
+  font-size: 16px;
 }
+
