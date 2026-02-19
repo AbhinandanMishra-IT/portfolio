@@ -642,3 +642,26 @@ body {
 .contact-item a:hover {
   color: #00eaff;
 }
+.experience-card {
+    text-align: left;
+}
+
+.custom-bullets {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-bullets li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.custom-bullets li::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+    color: #000; /* change color if needed */
+    font-weight: bold;
+}
