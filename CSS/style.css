@@ -584,6 +584,32 @@ header {
 
 /* Mobile Devices */
 @media (max-width: 768px) {
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 55px;     /* control circle size */
+    height: 55px;
+    margin-left: 0;  /* remove unwanted shift */
+  }
+
+  /* Optional: slightly reduce resume button */
+  .top-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+}
 
   body {
     padding-top: 70px;
