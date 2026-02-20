@@ -129,3 +129,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+// Premium Visitor Counter (Local Storage Based)
+
+const counterElement = document.getElementById("visitorCount");
+
+let visitCount = localStorage.getItem("visitCount");
+
+if (!visitCount) {
+  visitCount = 1;
+} else {
+  visitCount = parseInt(visitCount) + 1;
+}
+
+localStorage.setItem("visitCount", visitCount);
+
+// Animated counting effect
+let current = 0;
+const target = visitCount;
+
+const updateCounter = () => {
+  if (current < target) {
+    current++;
+    counterElement.innerText = current.toString().padStart(5, "0");
+    setTimeout(updateCounter, 20);
+  }
+};
+
+updateCounter();
