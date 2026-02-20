@@ -16,10 +16,10 @@ body {
   padding-top: 80px; /* FIXED HEADER OFFSET */
 }
 
-/* ===== SECTION SPACING ===== */
+/* ===== SECTION SPACING (GAP FIXED) ===== */
 section {
-    padding: 80px 20px;
-  }
+  padding: 0 20px 80px 20px; /* removed top padding */
+}
 
 /* ===== HEADER ===== */
 header {
@@ -43,49 +43,13 @@ header.sticky {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.navlist {
-  display: flex;
-}
-
-.navlist a {
-  margin: 0 18px;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 16px;
-  transition: 0.3s ease;
-}
-
-.navlist a:hover {
-  color: #00eaff;
-}
-
-.top-btn {
-  background: #00eaff;
-  color: #000;
-  padding: 10px 22px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.top-btn:hover {
-  transform: translateY(-3px);
-}
-
-/* ===== MENU ICON ===== */
-#menu-icon {
-  font-size: 32px;
-  cursor: pointer;
-  display: none;
-}
-
-/* ===== HOME SECTION (GAP FIXED) ===== */
+/* ===== HOME SECTION ===== */
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 3rem;
-  padding: 0 20% 50px 20%; /* removed extra top padding */
+  padding: 0 20% 50px 20%;
   background: linear-gradient(
     135deg,
     #0f172a 0%,
@@ -96,64 +60,11 @@ header.sticky {
   overflow: hidden;
 }
 
-.home::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(0,234,255,0.2) 0%, transparent 70%);
-  top: -150px;
-  right: -150px;
-  z-index: 0;
-}
-
 .home-text,
 .home-img {
   position: relative;
   z-index: 2;
 }
-.home-text h3 {
-  font-size: 22px;
-  color: #00eaff;
-}
-
-.home-text h1 {
-  font-size: 48px;
-  margin: 15px 0;
-  font-weight: 700;
-}
-
-.home-text h5 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #cbd5e1;
-}
-
-.home-text h5 span {
-  color: #00eaff;
-}
-
-.home-text p {
-  font-size: 16px;
-  color: #d1d5db;
-  max-width: 550px;
-  margin-bottom: 25px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #00eaff;
-  color: #000;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
 /* ===== HOME IMAGE ===== */
 .home-img {
   display: flex;
