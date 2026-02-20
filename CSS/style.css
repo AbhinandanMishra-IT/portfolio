@@ -13,7 +13,6 @@ body {
   background: #0f172a;
   color: #ffffff;
   line-height: 1.7;
-  padding-top: 80px;   /* 👈 This fixes everything properly */
 }
 
 /* ===== SECTION SPACING ===== */
@@ -37,7 +36,9 @@ header {
   backdrop-filter: blur(10px);       /* Smooth glass effect */
   box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
-
+.home {
+  margin-top: 80px;
+}
 
 header.sticky {
   background: #111827;
@@ -1291,7 +1292,6 @@ header.sticky {
   .home {
     grid-template-columns: 1fr;
     text-align: center;
-    padding-top: 100px;
   }
 
   .home-text {
