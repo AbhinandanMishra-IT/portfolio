@@ -1,0 +1,77 @@
+<svg width="220" height="90" viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Metallic Gradient -->
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#cbd5e1"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="75%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <!-- Neon Gradient -->
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00eaff"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <!-- Glow Effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Light Sweep -->
+    <linearGradient id="shine">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform"
+        type="translate"
+        from="-1 0"
+        to="1 0"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </linearGradient>
+
+  </defs>
+
+  <!-- Rotating Group -->
+  <g>
+    <animateTransform attributeName="transform"
+      type="rotate"
+      from="0 110 45"
+      to="360 110 45"
+      dur="25s"
+      repeatCount="indefinite"/>
+
+    <!-- Neon Shadow -->
+    <text x="40" y="60"
+          font-family="Jost, sans-serif"
+          font-size="55"
+          font-weight="800"
+          fill="url(#neon)"
+          filter="url(#glow)"
+          opacity="0.6">
+      AM
+    </text>
+
+    <!-- Metallic Text -->
+    <text x="40" y="60"
+          font-family="Jost, sans-serif"
+          font-size="55"
+          font-weight="800"
+          fill="url(#metal)"
+          stroke="url(#neon)"
+          stroke-width="1.5"
+          letter-spacing="3">
+      AM
+    </text>
+
+  </g>
+
+</svg>
