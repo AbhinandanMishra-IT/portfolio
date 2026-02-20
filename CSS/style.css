@@ -297,46 +297,6 @@ header.sticky {
   font-size: 14px;
   color: #94a3b8;
 }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .home,
-  .about {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  #menu-icon {
-    display: block;
-    font-size: 28px;
-    color: #ffffff;
-  }
-
-  .navlist {
-    position: fixed;          /* IMPORTANT */
-    top: 70px;
-    left: -100%;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background: #111827;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s ease;
-    z-index: 999;             /* Above everything */
-  }
-
-  .navlist.active {
-    left: 0;
-  }
-
-  .navlist a {
-    display: block;
-    margin: 20px 0;
-    font-size: 18px;
-  }
-}
-
 /* ===== SOCIAL BUTTONS ===== */
 .social {
   margin-bottom: 25px;
@@ -876,28 +836,6 @@ header.sticky {
   transform: scale(1.2);
 }
 /* =========================================
-   RESPONSIVE FIX
-========================================= */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skill-card {
-    padding: 25px;
-  }
-}
-
-/* =========================================
    SKILLS SECTION (2 TOP + 3 BOTTOM)
 ========================================= */
 
@@ -1186,5 +1124,164 @@ header.sticky {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
+  }
+}
+/* =========================================
+   CLEAN RESPONSIVE STRUCTURE
+========================================= */
+
+/* ========== Tablet ========== */
+@media (max-width: 1024px) {
+
+  section {
+    padding: 100px 6%;
+  }
+
+  .home,
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .home-img img {
+    width: 320px;
+    height: 320px;
+  }
+
+  .about-img img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .skills-row-2,
+  .skills-row-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========== Mobile ========== */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 70px;
+  }
+
+  section {
+    padding: 90px 20px;
+  }
+
+  header {
+    padding: 0 20px;
+    height: 65px;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navlist {
+    position: fixed;
+    top: 65px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 65px);
+    background: #111827;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+  }
+
+  .navlist.active {
+    left: 0;
+  }
+
+  .navlist a {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .home-text h1 {
+    font-size: 26px;
+  }
+
+  .home-text h5 {
+    font-size: 14px;
+  }
+
+  .home-text p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .home-img img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .social-btn,
+  .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .skills-row-2,
+  .skills-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card {
+    padding: 25px;
+  }
+}
+
+
+/* ========== Small Phones ========== */
+@media (max-width: 480px) {
+
+  .home-text h1 {
+    font-size: 22px;
+  }
+
+  .home-text p {
+    font-size: 13px;
+  }
+
+  .home-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .heading h2 {
+    font-size: 24px;
   }
 }
