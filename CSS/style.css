@@ -260,18 +260,101 @@ header.sticky {
   gap: 2rem;
 }
 
-.col,
-.row {
-  background: #1e293b;
-  padding: 30px;
-  border-radius: 15px;
-  transition: 0.3s ease;
+/* =====================================
+   PREMIUM PROJECT CARDS
+===================================== */
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 60px;
 }
 
-.col:hover,
-.row:hover {
-  transform: translateY(-8px);
-  background: #263445;
+/* Main Card */
+.col {
+  position: relative;
+  padding: 40px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border: 1px solid rgba(0, 234, 255, 0.15);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    inset 0 0 40px rgba(0, 234, 255, 0.05);
+
+  transition: all 0.5s ease;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Animated Glow Border */
+.col::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  padding: 1px;
+  background: linear-gradient(120deg, #00eaff, transparent, #00eaff);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+/* Light Sweep Effect */
+.col::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0,234,255,0.15),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: 0.7s ease;
+  opacity: 0;
+}
+
+/* Hover Effects */
+.col:hover {
+  transform: translateY(-12px) rotateX(5deg);
+  box-shadow:
+    0 30px 80px rgba(0, 234, 255, 0.25),
+    inset 0 0 60px rgba(0, 234, 255, 0.1);
+}
+
+.col:hover::before {
+  opacity: 1;
+}
+
+.col:hover::after {
+  top: 100%;
+  left: 100%;
+  opacity: 1;
+}
+
+/* Title Styling */
+.col h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0,234,255,0.2);
+}
+
+/* Description */
+.col p {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.7;
 }
 
 /* ===== CONTACT ===== */
