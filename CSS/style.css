@@ -13,12 +13,13 @@ body {
   background: #0f172a;
   color: #ffffff;
   line-height: 1.7;
+  padding-top: 80px; /* FIXED HEADER OFFSET */
 }
 
 /* ===== SECTION SPACING ===== */
 section {
-  padding: 80px 10%;
-}
+    padding: 80px 20px;
+  }
 
 /* ===== HEADER ===== */
 header {
@@ -32,14 +33,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
-  background: rgba(17, 24, 39, 0.9);  /* Add background */
-  backdrop-filter: blur(10px);       /* Smooth glass effect */
+  background: rgba(17, 24, 39, 0.9);
+  backdrop-filter: blur(10px);
   box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
-/* ONLY THIS spacing method */
-.home {
-  padding-top: 120px;
-}
+
 header.sticky {
   background: #111827;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -81,13 +79,13 @@ header.sticky {
   display: none;
 }
 
-/* ===== HOME SECTION ===== */
+/* ===== HOME SECTION (GAP FIXED) ===== */
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 3rem;
-  padding-bottom: 60px;
+  padding: 0 20% 50px 20%; /* removed extra top padding */
   background: linear-gradient(
     135deg,
     #0f172a 0%,
@@ -97,6 +95,7 @@ header.sticky {
   position: relative;
   overflow: hidden;
 }
+
 .home::before {
   content: "";
   position: absolute;
@@ -107,12 +106,12 @@ header.sticky {
   right: -150px;
   z-index: 0;
 }
+
 .home-text,
 .home-img {
   position: relative;
   z-index: 2;
 }
-
 .home-text h3 {
   font-size: 22px;
   color: #00eaff;
@@ -580,10 +579,12 @@ header.sticky {
 
 /* Mobile Devices */
 @media (max-width: 768px) {
-
+    body {
+    padding-top: 65px; /* mobile header height */
+  }  
   header {
     height: 65px;
-    padding: 0 6%;
+    padding: 0 20px;
   }
 
   #menu-icon {
