@@ -1152,3 +1152,39 @@ header.sticky {
     line-height: 1.6;
   }
 }
+/* =====================================
+   TRUE MOBILE LAYOUT FIX
+===================================== */
+
+@media (max-width: 768px) {
+
+  section {
+    padding: 90px 20px;   /* remove 10% and use fixed padding */
+  }
+
+  .home {
+    padding-top: 100px;
+  }
+
+  .home-text {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .home-text p {
+    max-width: 100%;
+  }
+
+  .social,
+  .btn {
+    width: 100%;
+  }
+
+  .social-btn,
+  .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
