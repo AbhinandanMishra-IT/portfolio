@@ -1081,9 +1081,10 @@ header.sticky {
 /* Mobile */
 @media (max-width: 768px) {
 
-  .home {
-    padding: 90px 6% 60px 6%;
+.home {
+    padding: 30px 20px 60px 20px;
   }
+}
 
   .home-text h1 {
     font-size: 26px;
@@ -1215,10 +1216,6 @@ header.sticky {
     padding: 90px 20px;   /* remove 10% and use fixed padding */
   }
 
-  .home {
-    padding-top: 100px;
-  }
-
   .home-text {
     width: 100%;
     max-width: 100%;
@@ -1320,10 +1317,6 @@ header.sticky {
     margin: 15px 0;
     font-size: 18px;
   }
-
-.home {
-  margin-top: 65px;   /* exactly header height */
-}
 
   .home-text {
     display: flex;
