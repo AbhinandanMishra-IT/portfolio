@@ -78,7 +78,7 @@ export const renderHome = () => `
           <i class="bx bxl-linkedin"></i> LinkedIn
         </a>
 
-        <a href="https://github.com/abhinandanmishra-it" target="_blank" class="social-btn github">
+        <a href="https://github.com/theabhinandanmishra" target="_blank" class="social-btn github">
           <i class="bx bxl-github"></i> GitHub
         </a>
 
