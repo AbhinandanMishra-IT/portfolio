@@ -27,14 +27,13 @@ header {
   left: 0;
   width: 100%;
   height: 80px;
-  z-index: 1000;
+  z-index: 1000;              /* VERY IMPORTANT */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10%;
-  background: rgba(17, 24, 39, 0.9);
+  background: rgba(15, 23, 42, 0.95);  /* Slightly solid */
   backdrop-filter: blur(10px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 /* Logo */
@@ -1539,25 +1538,26 @@ header {
    CYBER / SECURITY TECH BACKGROUND
 ===================================== */
 
+/* ===== CYBER BG FIX ===== */
+
 .cyber-bg {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* NOT CENTER */
+  padding-top: 150px;        /* Push below header */
   z-index: -2;
   pointer-events: none;
-  overflow: hidden;
 }
 
 /* ========== ROTATING RINGS ========== */
 
 .cyber-rings {
-  width: 1000px;
-  height: 1000px;
+  width: 800px;
+  height: 800px;
   animation: rotateCyber 80s linear infinite;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 @keyframes rotateCyber {
