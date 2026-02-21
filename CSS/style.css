@@ -35,6 +35,9 @@ header {
   background: rgba(15, 23, 42, 0.85);  /* Slightly solid */
   backdrop-filter: blur(10px);
 }
+body {
+  padding-top: 80px;
+}
 
 /* Logo */
 .logo img {
@@ -1014,9 +1017,10 @@ header {
   box-shadow: 0 25px 60px rgba(0,0,0,0.6);
 }
 /* Allow clicks through background layers */
-#particles-bg,
-#cursor-canvas {
-  pointer-events: none !important;
+#particles-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
 }
 
 /* Ensure experience card is clickable */
@@ -1538,16 +1542,15 @@ header {
    CYBER / SECURITY TECH BACKGROUND
 ===================================== */
 
-/* ===== CYBER BG FIX ===== */
+/* ===== CYBER BG FIX (KEEP CENTER) ===== */
 
 .cyber-bg {
   position: fixed;
   inset: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;   /* NOT CENTER */
-  padding-top: 150px;        /* Push below header */
-  z-index: -2;
+  align-items: center;   /* KEEP CENTER */
+  z-index: -1;           /* Behind everything */
   pointer-events: none;
 }
 
