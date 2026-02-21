@@ -45,11 +45,12 @@ header {
 
 /* Center Navigation */
 .navlist {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  align-items: center;
   gap: 30px;
+  position: static;     /* remove absolute */
+  transform: none;      /* remove translate */
+  margin: 0 auto;       /* keep centered naturally */
 }
 
 .navlist a {
