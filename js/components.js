@@ -50,7 +50,7 @@ export const renderHeader = () => `
     </ul>
 
     <!-- Right Button -->
-    <a href="resume/ABHINANDAN MISHRA.pdf" target="_blank" class="top-btn">
+    <a href="resume/index.html" target="_blank" class="top-btn">
       View Resume
     </a>
   </header>
