@@ -50,7 +50,7 @@ export const renderHeader = () => `
     </ul>
 
     <!-- Right Button -->
-    <a href="resume/index.html" target="_blank" class="top-btn">
+    <a href="resume/Temp.html" target="_blank" class="top-btn">
       View Resume
     </a>
   </header>
@@ -82,7 +82,7 @@ export const renderHome = () => `
           <i class="bx bxl-github"></i> GitHub
         </a>
 
-        <a href="resume/ABHINANDAN MISHRA.pdf" download class="social-btn btn">Download Resume</a>
+        <a href="resume/Temp.html" download class="social-btn btn">Download Resume</a>
 
       </div>
     </div>
