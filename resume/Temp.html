@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinandan Mishra | Executive Profile</title>
+
+    <style>
+        /* ===== GLOBAL RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(250, 204, 21, 0.1) 0, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(30, 58, 138, 0.3) 0, transparent 80%);
+            color: white;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* ===== ANIMATED GLASS BLOBS ===== */
+        .blob-container {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+            filter: blur(80px);
+            opacity: 0.4;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            background: #38bdf8;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            width: 500px;
+            height: 500px;
+            top: -100px;
+            left: -100px;
+            background: #1e3a8a;
+            animation-duration: 25s;
+        }
+
+        .blob-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -50px;
+            right: -50px;
+            background: #facc15;
+            animation-duration: 30s;
+            animation-delay: -5s;
+        }
+
+        .blob-3 {
+            width: 300px;
+            height: 300px;
+            top: 40%;
+            left: 60%;
+            background: #0ea5e9;
+            animation-duration: 22s;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(100px, 50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-50px, 150px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+        }
+
+        /* ===== MAIN GLASS CONTAINER ===== */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            border-radius: 30px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            transition: 0.4s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.01);
+            box-shadow: 0 35px 90px rgba(56, 189, 248, 0.4);
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #38bdf8, #facc15, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0%
+            }
+
+            100% {
+                background-position: 200%
+            }
+        }
+
+        .header p {
+            margin: 8px 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .header a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .header a:hover {
+            color: #facc15;
+        }
+
+        /* ===== SECTION TITLE ===== */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            border-left: 6px solid #38bdf8;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        /* ===== EXPERIENCE CARD ===== */
+        .job {
+            padding: 30px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+            transition: 0.4s;
+        }
+
+        .job:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(56, 189, 248, 0.5);
+        }
+
+        .job h3 {
+            color: #facc15;
+            margin-bottom: 5px;
+        }
+
+        .job span {
+            display: block;
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+
+        .job ul {
+            padding-left: 20px;
+        }
+
+        .job li {
+            margin-bottom: 8px;
+        }
+
+        /* ===== SKILLS GRID ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 20px;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(250, 204, 21, 0.4);
+        }
+
+        .skill-card h4 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-card h4 svg {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* ===== SOCIAL BUTTONS ===== */
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s all ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn:hover {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: #38bdf8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+            color: #38bdf8;
+        }
+
+        .btn-github:hover {
+            background: rgba(250, 204, 21, 0.2);
+            border-color: #facc15;
+            box-shadow: 0 10px 20px rgba(250, 204, 21, 0.3);
+            color: #facc15;
+        }
+
+        .btn-website:hover {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+            color: #10b981;
+        }
+
+
+
+        /* ===== PRINT MEDIA QUERY ===== */
+        @media print {
+            @page {
+                margin: 0.8cm 1.2cm;
+                size: A4;
+            }
+
+            .blob-container,
+            .btn-group {
+                display: none !important;
+            }
+
+            body {
+                background: white !important;
+                color: black !important;
+                font-size: 11pt;
+                line-height: 1.45;
+            }
+
+            .container {
+                margin: 0;
+                padding: 10px;
+                box-shadow: none;
+                background: none;
+                backdrop-filter: none;
+                width: 100%;
+                max-width: none;
+                transform: none !important;
+                border: 1px double #ccc !important;
+                min-height: auto;
+            }
+
+            .header {
+                margin-bottom: 25px;
+                /* Slightly increased for standard feel */
+                text-align: left;
+            }
+
+            .header h1 {
+                -webkit-text-fill-color: black !important;
+                background: none !important;
+                font-size: 30pt;
+                /* Professional Standard reached */
+                margin-bottom: 8px;
+            }
+
+            .header p {
+                font-size: 10pt;
+                margin-bottom: 2px;
+            }
+
+            .job,
+            .skill-card {
+                background: none !important;
+                border: 1px solid #f2f2f2 !important;
+                box-shadow: none !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 15px;
+                padding: 12px;
+            }
+
+            .section {
+                margin-bottom: 20px;
+            }
+
+            .section h2 {
+                border-left: 4px solid black !important;
+                color: black !important;
+                font-size: 15pt;
+                padding-left: 10px;
+                margin-bottom: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            /* Balanced Print Distribution for 2 Pages */
+            .print-break-page-2 {
+                break-before: page;
+                page-break-before: always;
+            }
+
+            .skill-card h4 svg {
+                stroke: black !important;
+                width: 16pt;
+                height: 16pt;
+            }
+
+            .skill-card p {
+                font-size: 10pt;
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:768px) {
+            .container {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Animated Glass Blobs -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+
+        <!-- MAINTENANCE CONTENT -->
+        <div class="header">
+            <h1>ABHINANDAN MISHRA</h1>
+            <p style="font-size: 24px; margin-top: 20px; color: #facc15; font-weight: 600;">Website Under Maintenance
+            </p>
+            <p style="margin-top: 15px; opacity: 0.8; max-width: 600px; margin-left: auto; margin-right: auto;">
+                We are currently performing scheduled maintenance to improve your experience.
+                The site will be back online shortly. Thank you for your patience.
+            </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <div class="skill-card"
+                style="display: inline-block; padding: 40px; border-radius: 30px; background: rgba(255, 255, 255, 0.03);">
+                <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="#38bdf8" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 20px;">
+                    <path
+                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                    </path>
+                </svg>
+                <p style="font-size: 18px; color: #38bdf8;">For inquiries, please contact:</p>
+                <p style="font-size: 20px; margin-top: 10px; font-weight: 500;">mishra.ravi94@gmail.com</p>
+
+                <div class="btn-group" style="margin-top: 30px;">
+                    <a href="https://www.linkedin.com/in/abhinandan-mishra-a05m08/" target="_blank" class="btn">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
